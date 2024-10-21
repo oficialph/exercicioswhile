@@ -1,0 +1,188 @@
+1-
+n=0
+
+while n < 500:
+    n+=1
+    if n % 2==0:
+        print(f"{n}")
+
+2-
+n=0
+
+while n < 500:
+    n+=1
+    if n % 2==0:
+        print(f"{n}")
+
+3-
+numero = int(input("Digite um número: "))
+
+def eh_primo(n):
+    if n <= 1:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+
+if eh_primo(numero):
+    print(f"O número {numero} é primo.")
+else:
+    print(f"O número {numero} não é primo.")
+
+4-
+numeroSecreto = 7 
+
+chute = int(input("Digite um número entre 1 e 100: "))
+
+while chute != numeroSecreto:
+    if chute < numeroSecreto:
+        print("Tente um número maior.")
+    else:
+        print("Tente um valor menor.")
+    
+    chute = int(input("Tente novamente: "))
+
+print("Parabéns! Você acertou o número.")
+
+5-
+idade = -1
+while idade < 0 or idade > 150:
+    idade = int(input("Digite a idade (0 a 150): "))
+
+salario = -1
+while salario <= 0:
+    salario = float(input("Digite o salário (maior que 0): "))
+
+sexo = ""
+while sexo not in ['f', 'm']:
+    sexo = input("Digite o sexo ('f' para feminino ou 'm' para masculino): ").lower()
+
+estado_civil = ""
+while estado_civil not in ['s', 'c', 'v', 'd']:
+    estado_civil = input("Digite o estado civil ('s' para solteiro, 'c' para casado, 'v' para viúvo, 'd' para divorciado): ").lower()
+
+print("Dados válidos:")
+print(f"Idade: {idade}")
+print(f"Salário: R$ {salario:.2f}")
+print(f"Sexo: {sexo}")
+print(f"Estado Civil: {estado_civil}")
+
+6-
+populacao_A = 80000 
+populacao_B = 200000 
+taxa_crescimento_A = 0.03 
+taxa_crescimento_B = 0.015
+anos = 0  
+
+while populacao_A < populacao_B:
+    populacao_A *= (1 + taxa_crescimento_A) 
+    populacao_B *= (1 + taxa_crescimento_B)  
+    anos += 1
+
+print(f"A população do país A ultrapassará ou igualará a do país B em {anos} anos.")
+
+7-
+base = float(input("Digite a base: "))
+expoente = int(input("Digite o expoente: "))
+
+resultado = 1
+contador = 0
+
+while contador < expoente:
+    resultado *= base
+    contador += 1
+
+print(f"{base} elevado a {expoente} é igual a {resultado}")
+
+8-
+total_idade = 0
+num_pessoas = 15
+contador = 0
+
+while contador < num_pessoas:
+    idade = int(input(f"Digite a idade da pessoa {contador + 1}: "))
+    total_idade += idade
+    contador += 1
+
+media_idade = total_idade / num_pessoas
+
+if media_idade <= 25:
+    classificacao = "jovem"
+elif media_idade <= 60:
+    classificacao = "adulta"
+else:
+    classificacao = "idosa"
+
+print(f"A média de idade da turma é {media_idade:.2f} anos. A turma é {classificacao}.")
+
+10-
+print("Lojas Tabajara")
+
+continuar = 's'
+
+while continuar == 's':
+    total = 0
+    contador = 1
+    preco = -1
+
+    while preco != 0:
+        preco = float(input(f"Produto {contador}: R$ "))
+        if preco != 0:
+            total += preco
+            contador += 1
+
+    print(f"Total: R$ {total:.2f}")
+
+    dinheiro = float(input("Dinheiro: R$ "))
+    troco = dinheiro - total
+    print(f"Troco: R$ {troco:.2f}")
+
+    continuar = input("Deseja registrar outra compra? (s/n): ").lower()
+
+11-
+total_idade = 0
+num_alunos = 25
+contador = 0
+maior_idade = -1
+menor_idade = 101 
+
+while contador < num_alunos:
+    idade = int(input(f"Digite a idade do aluno {contador + 1}: "))
+    
+    total_idade += idade
+    
+    if idade > maior_idade:
+        maior_idade = idade
+    
+    if idade < menor_idade:
+        menor_idade = idade
+    
+    contador += 1
+
+media_idade = total_idade / num_alunos
+
+print(f"A maior idade é: {maior_idade}")
+print(f"A menor idade é: {menor_idade}")
+print(f"A média das idades é: {media_idade:.2f}")
+
+12-
+numero = int(input("Digite um número para calcular o fatorial: "))
+
+fatorial = 1
+contador = 1
+
+while contador <= numero:
+    fatorial *= contador
+    contador += 1
+
+print(f"O fatorial de {numero} é {fatorial}.")
+
+
+
+
+
+
+
